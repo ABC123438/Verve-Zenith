@@ -1,4 +1,4 @@
-# Verve-Zenith
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -92,17 +92,19 @@
       color: #666;
       margin-bottom: 15px;
     }
-    .product button {
+    .product a {
+      display: inline-block;
       background: #28a745;
       color: white;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       font-size: 1rem;
+      text-decoration: none;
       cursor: pointer;
       transition: background 0.3s;
     }
-    .product button:hover {
+    .product a:hover {
       background: #218838;
     }
 
@@ -170,39 +172,58 @@
     <div class="product-grid">
       <div class="product">
         <img src="hoddie5.png" alt="Black Hoodie">
-        <h3>Attack on titan</h3>
-        <p>20%off 800</p>
-        <button>cash on delivery</button>
+        <h3>Attack on Titan</h3>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
       </div>
       <div class="product">
         <img src="hoodie2.jpg.png" alt="Gray Hoodie">
         <h3>Ryomen Sukuna</h3>
-        <p>20%off 800</p>
-        <button>cash on delivery</button>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
       </div>
       <div class="product">
         <img src="hoodi3.png" alt="Red Hoodie">
-        <h3>Shunsul kyoraku</h3>
-        <p>20%off 800</p>
-        <button>cash on delivery</button>
+        <h3>Shunsui Kyoraku</h3>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
       </div>
       <div class="product">
         <img src="hoodi6.png" alt="Blue Hoodie">
         <h3>Baki</h3>
-        <p>20%off 800</p>
-        <button>cash on delivery</button>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
       </div>
       <div class="product">
         <img src="hoodie1.jpg.png" alt="White Hoodie">
         <h3>Ryomen Sukuna</h3>
-        <p>20%off800</p>
-        <button>uplode soon</button>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
       </div>
       <div class="product">
         <img src="Screenshot 2024-12-24 141439.png" alt="Green Hoodie">
         <h3>Luffy</h3>
-        <p>20%off800</p>
-        <button>upload soon</button>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Additional Products -->
+      <div class="product">
+        <img src="hoodi4.png" alt="Yellow Hoodie">
+        <h3>Toji Fushiguro</h3>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="hoodi8.png" alt="Purple Hoodie">
+        <h3>Nagi</h3>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="hoodie_new3.png" alt="Orange Hoodie">
+        <h3>Goku</h3>
+        <p>20% off ₹800</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
       </div>
     </div>
   </div>
@@ -210,10 +231,9 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
   <footer>
-    <p>To order please join on whatsapp and contact on Community Admin</p>
+    <p>To order please join WhatsApp and contact the Community Admin.</p>
     <p>© 2025 Verve Zenith | All rights reserved.</p>
-    <p>contacts +917874131655</p>
-    <p>contacts +919054619314</p>
+    <p>Contacts: +91 7874131655 | +91 9054619314</p>
   </footer>
 </body>
 </html>
