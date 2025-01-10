@@ -13,7 +13,6 @@
     }
     body {
       font-family: 'Arial', sans-serif;
-      line-height: 1.6;
       background-color: #f8f9fa;
       color: #333;
     }
@@ -26,7 +25,7 @@
       text-align: center;
     }
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: bold;
     }
 
@@ -45,22 +44,33 @@
       font-size: 1rem;
       font-weight: bold;
       border-radius: 5px;
+      transition: background 0.3s;
+      cursor: pointer;
     }
     nav a:hover {
       background: #555;
     }
 
-    /* Main Container */
-    .container {
+    /* Section Styles */
+    section {
+      display: none;
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .container h2 {
+    section.active {
+      display: block;
+    }
+    h2 {
       font-size: 1.8rem;
       text-align: center;
       margin-bottom: 20px;
       color: #222;
+    }
+    .content {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
     }
 
     /* Product Grid */
@@ -97,37 +107,12 @@
       background: #28a745;
       color: white;
       padding: 10px 20px;
-      border: none;
       border-radius: 5px;
-      font-size: 1rem;
       text-decoration: none;
-      cursor: pointer;
       transition: background 0.3s;
     }
     .product a:hover {
       background: #218838;
-    }
-
-    /* WhatsApp Button */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
-    }
-    .whatsapp-btn img {
-      width: 30px;
-      height: 30px;
     }
 
     /* Footer */
@@ -135,25 +120,11 @@
       background: #333;
       color: white;
       text-align: center;
-      padding: 10px 0;
+      padding: 15px 0;
       margin-top: 30px;
     }
     footer p {
       font-size: 0.9rem;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      nav a {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-      }
-      .container h2 {
-        font-size: 1.5rem;
-      }
     }
   </style>
 </head>
@@ -162,78 +133,186 @@
     <h1>Verve Zenith Hoodie Store</h1>
   </header>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('shop')">Shop</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
   </nav>
-  <div class="container" id="shop">
-    <h2>Our Exclusive Collection</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="hoddie5.png" alt="Black Hoodie">
-        <h3>Attack on Titan</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="hoodie2.jpg.png" alt="Gray Hoodie">
-        <h3>Ryomen Sukuna</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="hoodi3.png" alt="Red Hoodie">
-        <h3>Shunsui Kyoraku</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="hoodi6.png" alt="Blue Hoodie">
-        <h3>Baki</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="hoodie1.jpg.png" alt="White Hoodie">
-        <h3>Ryomen Sukuna</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="Screenshot 2024-12-24 141439.png" alt="Green Hoodie">
-        <h3>Luffy</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <!-- Additional Products -->
-      <div class="product">
-        <img src="hoodi4.png" alt="Yellow Hoodie">
-        <h3>Toji Fushiguro</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="hoodi8.png" alt="Purple Hoodie">
-        <h3>Nagi</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
-      </div>
-      <div class="product">
-        <img src="hoodie_new3.png" alt="Orange Hoodie">
-        <h3>Goku</h3>
-        <p>20% off ₹800</p>
-        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <h2>Welcome to Verve Zenith</h2>
+    <div class="content">
+      <p>Explore our exclusive collection of hoodies and premium wear. Style yourself with Verve Zenith!</p>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="hoodie1.jpg.png" alt="Hoodie 1">
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="hoodie2.jpg.png" alt="Hoodie 2">
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+          <img src="hoodi3.png" alt="Hoodie 3">
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+          <img src="hoodi4.png" alt="Hoodie 4">
+        </div>
+        <!-- Product 5 -->
+        <div class="product">
+          <img src="hoddie5.png" alt="Hoodie 5">
+        </div>
+        <!-- Product 6 -->
+        <div class="product">
+          <img src="hoodi6.png" alt="Hoodie 6">
+        </div>
+        <!-- Product 7 -->
+        <div class="product">
+          <img src="Screenshot 2024-12-24 141439.png" alt="Hoodie 7">
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+          <img src="hoodi8.png" alt="Hoodie 8">
+        </div>
+        <!-- Product 9 -->
+        <div class="product">
+          <img src="hoodi9.png" alt="Hoodie 9">
+        </div>
+        <!-- Product 10 -->
+        <div class="product">
+          <img src="hoodi10.png" alt="Hoodie 10">
+        </div>
+         <!-- Product 11 -->
+         <div class="product">
+          <img src="hoodi11.png" alt="Hoodie 10">
+        </div>
+         <!-- Product 12 -->
+         <div class="product">
+          <img src="hoodi12.png" alt="Hoodie 10">
+        </div>
+        <!-- Repeat the same structure for more products -->
       </div>
     </div>
-  </div>
-  <a href="https://chat.whatsapp.com/J6rtbIlCElXH9pzFCiXUYx" class="whatsapp-btn" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop">
+    <h2>Our Hoodie Collection</h2>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="hoodie1.jpg.png" alt="Hoodie 1">
+        <h3>Ryomen Sukuna</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="hoodie2.jpg.png" alt="Hoodie 2">
+        <h3>Ryomen Sukuna</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="hoodi3.png" alt="Hoodie 2">
+        <h3>shunsui kyoraku</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="hoodi4.png" alt="Hoodie 2">
+        <h3>Toji fushiguro</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 5 -->
+      <div class="product">
+        <img src="hoddie5.png" alt="Hoodie 2">
+        <h3>Attack on titan</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 6 -->
+      <div class="product">
+        <img src="hoodi6.png" alt="Hoodie 2">
+        <h3>Baki Hanma</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 7 -->
+      <div class="product">
+        <img src="Screenshot 2024-12-24 141439.png" alt="Hoodie 2">
+        <h3>Monkey D.Luffy</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 8 -->
+      <div class="product">
+        <img src="hoodi8.png" alt="Hoodie 2">
+        <h3>Blue lock Nagi</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 9 -->
+      <div class="product">
+        <img src="hoodi9.png" alt="Hoodie 2">
+        <h3>Goku black</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 10 -->
+      <div class="product">
+        <img src="hoodi10.png" alt="Hoodie 2">
+        <h3>Vinland saga</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 11 -->
+      <div class="product">
+        <img src="hoodi11.png" alt="Hoodie 2">
+        <h3>Prince vegeta</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Product 12 -->
+      <div class="product">
+        <img src="hoodi12.png" alt="Hoodie 2">
+        <h3>Black clover Asta</h3>
+        <p>₹800 (20% off)</p>
+        <a href="https://www.instagram.com/vervezenith_co?igsh=Mmk1aXE4M3oyMjN5" target="_blank">Buy Now</a>
+      </div>
+      <!-- Add more products here as before -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="content">
+      <p>For orders and queries, join our WhatsApp community:</p>
+      <p><strong>Contact:</strong> +91 9265481410 | +91 9998510217</p>
+      <a href="https://chat.whatsapp.com/J6rtbIlCElXH9pzFCiXUYx" target="_blank">Join WhatsApp</a>
+    </div>
+  </section>
+
   <footer>
-    <p>To order please join WhatsApp and contact the Community Admin.</p>
     <p>© 2025 Verve Zenith | All rights reserved.</p>
-    <p>Contacts: +91 7874131655 | +91 9054619314</p>
   </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the selected section
+      const activeSection = document.getElementById(sectionId);
+      activeSection.classList.add('active');
+    }
+  </script>
 </body>
 </html>
